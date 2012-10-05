@@ -13,10 +13,10 @@
 - git: {local-name: hector_common, uri: 'https://github.com/FalkorSystems/hector_common.git'}
 - svn: {local-name: hector_gazebo, uri: 'https://tu-darmstadt-ros-pkg.googlecode.com/svn/branches/fuerte/hector_gazebo'}
 - git: {local-name: hector_localization, uri: 'https://github.com/FalkorSystems/hector_localization.git'}
-- svn: {local-name: hector_models, uri: 'https://tu-darmstadt-ros-pkg.googlecode.com/svn/branches/fuerte/hector_models'}
+- git: {local-name: hector_models, uri: 'https://github.com/FalkorSystems/hector_models.git'}
 - svn: {local-name: hector_navigation, uri: 'http://tu-darmstadt-ros-pkg.googlecode.com/svn/trunk/hector_navigation'}
 - svn: {local-name: hector_nist_arenas_gazebo, uri: 'https://tu-darmstadt-ros-pkg.googlecode.com/svn/trunk/hector_nist_arenas_gazebo'}
-- svn: {local-name: hector_quadrotor, uri: 'https://tu-darmstadt-ros-pkg.googlecode.com/svn/branches/fuerte/hector_quadrotor'}
+- git: {local-name: hector_quadrotor, uri: 'https://github.com/FalkorSystems/hector_quadrotor.git'}
 - svn: {local-name: hector_quadrotor_apps, uri: 'http://tu-darmstadt-ros-pkg.googlecode.com/svn/trunk/hector_quadrotor_apps'}
 - svn: {local-name: hector_quadrotor_experimental, uri: 'https://tu-darmstadt-ros-pkg.googlecode.com/svn/trunk/hector_quadrotor_experimental'}
 - svn: {local-name: hector_sandbox, uri: 'http://tu-darmstadt-ros-pkg.googlecode.com/svn/trunk/hector_sandbox'}
