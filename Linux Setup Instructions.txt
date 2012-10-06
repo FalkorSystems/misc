@@ -1,10 +1,11 @@
---
-Falkor Linux Installation Instructions
+####--
+## Falkor Linux Installation Instructions
+####
 
--- Launch Terminal, lock to Launcher
--- unlock useless open office stuff from launcher
+# Launch Terminal, lock to Launcher
+# unlock useless open office stuff from launcher
 
-http://www.samontab.com/web/2012/06/installing-opencv-2-4-1-ubuntu-12-04-lts/
+## http://www.samontab.com/web/2012/06/installing-opencv-2-4-1-ubuntu-12-04-lts/
 
 # Get upgrades
 sudo apt-get update
@@ -63,17 +64,14 @@ cd ~
 rm -rf ~/OpenCV-2.4.2*
 
 ## ROS
+# http://www.ros.org/wiki/fuerte/Installation/Ubuntu
 
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu precise main" > /etc/apt/sources.list.d/ros-latest.list'
 
 wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
-
 sudo apt-get update
 
-sudo apt-get install ros-fuerte-desktop-full
-
-sudo apt-get install python-rosinstall python-rosdep
-sudo apt-get install doxygen rubygems1.8 libxslt1-dev omniorb libreadline-dev omniorb omniidl omniorb-nameserver libomniorb4-1 libomniorb4-dev libomnithread3-dev libomnithread3c2 gccxml antlr libantlr-dev libxslt1-dev liblua5.1-0-dev ruby1.8-dev libruby1.8 rubygems1.8 
+sudo apt-get install ros-fuerte-desktop-full python-rosinstall python-rosdep doxygen rubygems1.8 libxslt1-dev omniorb libreadline-dev omniorb omniidl omniorb-nameserver libomniorb4-1 libomniorb4-dev libomnithread3-dev libomnithread3c2 gccxml antlr libantlr-dev libxslt1-dev liblua5.1-0-dev ruby1.8-dev libruby1.8 rubygems1.8 
 
 sudo rosdep init
 rosdep update
@@ -108,10 +106,9 @@ source setup.sh
 echo 'source ~/ros/setup.sh' >> ~/.bashrc
 
 ## Make
-roscd ardrone_autonomy
-./build_sdk.sh
 
-rosmake ardrone_autonomy
+# orocos
+# http://www.ros.org/wiki/orocos_toolchain_ros
 
 roscd orocos_toolchain
 git submodule init
@@ -122,6 +119,12 @@ roscd orocos_toolchain
 source env.sh
 rosmake orocos_toolchain rtt_ros_integration rtt_ros_comm rtt_common_msgs rtt_geometry
 
+# ardrone
+roscd ardrone_autonomy
+./build_sdk.sh
+rosmake ardrone_autonomy
+
+# falkor quadrotor
 rosmake falkor_quadrotor
 
 
