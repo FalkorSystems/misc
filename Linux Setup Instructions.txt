@@ -126,6 +126,8 @@ rosmake ardrone_autonomy
 # falkor quadrotor
 rosmake falkor_quadrotor
 
+roslaunch falkor_quadrotor base.launch
+
 
 
 
