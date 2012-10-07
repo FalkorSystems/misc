@@ -88,6 +88,19 @@ sudo apt-get install git git-svn git-flow
 git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
 
+## Misc
+sudo apt-get install emacs-23 rosemacs-el
+
+cat >> ~/.emacs <<EOF
+;; Load the library and start it up
+(require 'rosemacs)
+(invoke-rosemacs)
+
+;; Optional but highly recommended: add a prefix for quick access
+;; to the rosemacs commands
+(global-set-key "\C-x\C-r" ros-keymap)
+EOF
+
 ## ROS workspace
 mkdir ~/ros
 cd ~/ros
