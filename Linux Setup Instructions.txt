@@ -75,9 +75,7 @@ sudo apt-get install ros-fuerte-desktop-full python-rosinstall python-rosdep dox
 sudo rosdep init
 rosdep update
 
-sudo apt-get install python-pip
-
-sudo pip install -U rosinstall
+sudo apt-get install python-pip python-rosinstall python-vcstools
 
 # Test
 source /opt/ros/fuerte/setup.bash
