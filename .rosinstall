@@ -11,7 +11,7 @@
 - svn: {local-name: biorob_common, uri: 'https://tu-darmstadt-ros-pkg.googlecode.com/svn/trunk/biorob_common'}
 - git: {local-name: falkor_quadrotor, uri: 'https://github.com/FalkorSystems/falkor_quadrotor.git'}
 - git: {local-name: hector_common, uri: 'https://github.com/FalkorSystems/hector_common.git'}
-- svn: {local-name: hector_gazebo, uri: 'https://tu-darmstadt-ros-pkg.googlecode.com/svn/branches/fuerte/hector_gazebo'}
+- git: {local-name: hector_gazebo, uri: 'https://github.com/FalkorSystems/hector_gazebo.git'}
 - git: {local-name: hector_localization, uri: 'https://github.com/FalkorSystems/hector_localization.git'}
 - git: {local-name: hector_models, uri: 'https://github.com/FalkorSystems/hector_models.git'}
 - svn: {local-name: hector_navigation, uri: 'http://tu-darmstadt-ros-pkg.googlecode.com/svn/trunk/hector_navigation'}
