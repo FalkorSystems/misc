@@ -59,7 +59,7 @@
     meta: {repo-name: wg-kforge}
     uri: https://kforge.ros.org/geometry/eigen
     version: tf_rework
-- git: {local-name: ardrone_autonomy, uri: 'https://github.com/FalkorSystems/ardrone_autonomy.git'}
+- git: {local-name: ardrone_autonomy, uri: 'https://github.com/AutonomyLab/ardrone_autonomy.git'}
 - svn: {local-name: joystick_drivers, uri: 'https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk'}
 - svn: {local-name: ps3joy, uri: 'https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk/ps3joy'}
 - hg:
