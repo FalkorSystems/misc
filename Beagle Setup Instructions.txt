@@ -35,15 +35,17 @@ cd build
 cmake .. -DCMAKE_INSTALL_PREFIX=/opt/ros/fuerte
 make -j8
 make -j8
+make -j8
 sudo make install
 
 
 # save the image
 # put the SD back in your pc
-sudo dd if=/dev/sdX bs=4096 | dd bs=4096 of=~/BEAGLE_ROS_BACKUP.IMG
+# (XG is 16G or whatnot)
+sudo dd if=/dev/sdX bs=4096 | pv -s XG | dd bs=4096 of=~/BEAGLE_ROS_BACKUP.IMG
 
 # restore from an image
-dd if=~/BEAGLE_ROS_BACKUP.IMG bs=4096 | sudo dd bs=4096 of=/dev/sdX
+dd if=~/BEAGLE_ROS_BACKUP.IMG bs=4096 | pv -s XG | sudo dd bs=4096 of=/dev/sdX
 
 
 
