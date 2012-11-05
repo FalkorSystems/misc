@@ -22,20 +22,21 @@ sudo apt-get upgrade
 
 # http://www.ros.org/wiki/fuerte/Installation/Ubuntu/Source
 
-sudo apt-get install python-pip build-essential python-yaml cmake subversion wget python-setuptools mercurial git-core python-yaml libapr1-dev libaprutil1-dev libbz2-dev python-dev python-empy python-nose libgtest-dev python-paramiko libboost-all-dev liblog4cxx10-dev pkg-config
+sudo apt-get install python-pip build-essential python-yaml cmake subversion wget python-setuptools mercurial git-core python-yaml libapr1-dev libaprutil1-dev libbz2-dev python-dev python-empy python-nose libgtest-dev python-paramiko libboost-all-dev liblog4cxx10-dev pkg-config 
 
 sudo pip install -U rosinstall vcstools rospkg rosdep
 
-rosinstall --catkin ~/ros-underlay http://ros.org/rosinstalls/fuerte-ros-base.rosinstall
+wget http://ros.org/rosinstalls/fuerte-ros-base.rosinstall
+# edit and replace wg-debs with ros-gbp for action lib
+
+rosinstall --catkin ~/ros-underlay fuerte-ros-base.rosinstall
 
 cd ~/ros-underlay
 mkdir build
 cd build
 
 cmake .. -DCMAKE_INSTALL_PREFIX=/opt/ros/fuerte
-make -j8
-make -j8
-make -j8
+make ; make ; make ; make
 sudo make install
 
 
