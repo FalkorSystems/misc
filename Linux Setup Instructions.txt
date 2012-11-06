@@ -107,7 +107,7 @@ source setup.sh
 rosws update --parallel=4
 source setup.sh
 
-sudo echo 'source /opt/ros/fuerte/setup.bash' >> /etc/bash.bashrc
+sudo sh -c "echo 'source /opt/ros/fuerte/setup.bash' >> /etc/bash.bashrc"
 echo 'source ~/ros/setup.sh' >> ~/.bashrc
 
 ## Make
