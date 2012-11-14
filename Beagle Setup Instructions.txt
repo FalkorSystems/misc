@@ -22,9 +22,9 @@ sudo apt-get upgrade
 
 # http://www.ros.org/wiki/fuerte/Installation/Ubuntu/Source
 
-sudo apt-get install python-pip build-essential python-yaml cmake subversion wget python-setuptools mercurial git-core python-yaml libapr1-dev libaprutil1-dev libbz2-dev python-dev python-empy python-nose libgtest-dev python-paramiko libboost-all-dev liblog4cxx10-dev pkg-config 
+sudo apt-get install python-pip build-essential python-yaml cmake subversion wget python-setuptools mercurial git-core python-yaml libapr1-dev libaprutil1-dev libbz2-dev python-dev python-empy python-nose libgtest-dev python-paramiko libboost-all-dev liblog4cxx10-dev pkg-config python-serial
 
-sudo pip install -U rosinstall vcstools rospkg rosdep
+sudo pip install -U rosinstall vcstools rospkg rosdep pyserial
 
 wget http://ros.org/rosinstalls/fuerte-ros-base.rosinstall
 # edit and replace wg-debs with ros-gbp for action lib
@@ -39,6 +39,30 @@ cmake .. -DCMAKE_INSTALL_PREFIX=/opt/ros/fuerte
 make ; make ; make ; make
 sudo make install
 
+sudo rosdep init
+rosdep update
+
+sudo rm -rf ros-underlay fuerte-ros-base.rosinstall
+
+## ROS workspace
+mkdir ~/ros
+cd ~/ros
+rosws init
+source setup.sh
+
+git config credential.helper 'cache --timeout=3600'
+git clone https://github.com/FalkorSystems/misc
+
+cp misc/.rosinstall .
+source setup.sh
+
+rosws update --parallel=4
+source setup.sh
+
+sudo sh -c "echo 'source /opt/ros/fuerte/setup.bash' >> /etc/bash.bashrc"
+echo 'source ~/ros/setup.sh' >> ~/.bashrc
+
+usermod -a -G dialout ubuntu
 
 # save the image
 # put the SD back in your pc
