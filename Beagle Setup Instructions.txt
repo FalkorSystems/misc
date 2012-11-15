@@ -20,9 +20,17 @@ wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
 sudo apt-get update
 sudo apt-get upgrade
 
+# configure wifi
+# edit /etc/network/interfaces
+# add the lines
+auto wlan0
+iface wlan0 inet dhcp
+    wpa-ssid "FalkorSystems"
+    wpa-psk  "lnap9calkncalf9mcldf"
+
 # http://www.ros.org/wiki/fuerte/Installation/Ubuntu/Source
 
-sudo apt-get install python-pip build-essential python-yaml cmake subversion wget python-setuptools mercurial git-core python-yaml libapr1-dev libaprutil1-dev libbz2-dev python-dev python-empy python-nose libgtest-dev python-paramiko libboost-all-dev liblog4cxx10-dev pkg-config python-serial
+sudo apt-get install python-pip build-essential python-yaml cmake subversion wget python-setuptools mercurial git-core python-yaml libapr1-dev libaprutil1-dev libbz2-dev python-dev python-empy python-nose libgtest-dev python-paramiko libboost-all-dev liblog4cxx10-dev pkg-config python-serial python-sip python-sip-dev libeigen3-dev libcppunit-dev git-flow vim
 
 sudo pip install -U rosinstall vcstools rospkg rosdep pyserial
 
@@ -32,6 +40,7 @@ wget http://ros.org/rosinstalls/fuerte-ros-base.rosinstall
 rosinstall --catkin ~/ros-underlay fuerte-ros-base.rosinstall
 
 cd ~/ros-underlay
+
 mkdir build
 cd build
 
@@ -53,7 +62,7 @@ source setup.sh
 git config credential.helper 'cache --timeout=3600'
 git clone https://github.com/FalkorSystems/misc
 
-cp misc/.rosinstall .
+cp misc/rosinstall-beagle .rosinstall
 source setup.sh
 
 rosws update --parallel=4
@@ -62,7 +71,8 @@ source setup.sh
 sudo sh -c "echo 'source /opt/ros/fuerte/setup.bash' >> /etc/bash.bashrc"
 echo 'source ~/ros/setup.sh' >> ~/.bashrc
 
-usermod -a -G dialout ubuntu
+sudo usermod -a -G dialout ubuntu
+sudo usermod -a -G kmem ubuntu
 
 # save the image
 # put the SD back in your pc
