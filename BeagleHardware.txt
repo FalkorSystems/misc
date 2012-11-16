@@ -1,0 +1,19 @@
+Robot Beagle:
+ - XBee (UART1)
+ - GPS (UART2)
+ - Servo Controller (UART4)
+ - IMU (I2C)
+ - Barometer (I2C)
+ - Sonar (Analog)
+
+Beacon Beagle:
+ - XBee (UART1)
+ - GPS (UART2)
+ - IMU (I2C) (not necessary?)
+ - Barometer (I2C)
+
+Operator Beagle:
+ - XBee (UART1)
+ - PS3Joy (USB)
+ - GPS (UART2)
+

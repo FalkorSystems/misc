@@ -1,0 +1,3 @@
+[submodule "beaglebone-pinmux-tool"]
+	path = beaglebone-pinmux-tool
+	url = https://github.com/piranha32/beaglebone-pinmux-tool.git
