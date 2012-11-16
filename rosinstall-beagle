@@ -1,0 +1,93 @@
+# THIS IS A FILE WHICH IS MODIFIED BY rosinstall
+# IT IS UNLIKELY YOU WANT TO EDIT THIS FILE BY HAND,
+# UNLESS FOR REMOVING ENTRIES.
+# IF YOU WANT TO CHANGE THE ROS ENVIRONMENT VARIABLES
+# USE THE rosinstall TOOL INSTEAD.
+# IF YOU CHANGE IT, USE rosinstall FOR THE CHANGES TO TAKE EFFECT
+- other: {local-name: /opt/ros/fuerte/share/ros}
+- other: {local-name: /opt/ros/fuerte/share}
+- other: {local-name: /opt/ros/fuerte/stacks}
+- setup-file: {local-name: /opt/ros/fuerte/setup.sh}
+- svn: {local-name: biorob_common, uri: 'https://tu-darmstadt-ros-pkg.googlecode.com/svn/trunk/biorob_common'}
+- git: {local-name: falkor_quadrotor, uri: 'https://github.com/FalkorSystems/falkor_quadrotor.git'}
+- git: {local-name: hector_common, uri: 'https://github.com/FalkorSystems/hector_common.git'}
+- git: {local-name: hector_gazebo, uri: 'https://github.com/FalkorSystems/hector_gazebo.git'}
+- git: {local-name: hector_localization, uri: 'https://github.com/FalkorSystems/hector_localization.git'}
+- git: {local-name: hector_models, uri: 'https://github.com/FalkorSystems/hector_models.git'}
+- svn: {local-name: hector_navigation, uri: 'http://tu-darmstadt-ros-pkg.googlecode.com/svn/trunk/hector_navigation'}
+- svn: {local-name: hector_nist_arenas_gazebo, uri: 'https://tu-darmstadt-ros-pkg.googlecode.com/svn/trunk/hector_nist_arenas_gazebo'}
+- git: {local-name: hector_quadrotor, uri: 'https://github.com/FalkorSystems/hector_quadrotor.git'}
+- svn: {local-name: hector_quadrotor_apps, uri: 'http://tu-darmstadt-ros-pkg.googlecode.com/svn/trunk/hector_quadrotor_apps'}
+- svn: {local-name: hector_quadrotor_experimental, uri: 'https://tu-darmstadt-ros-pkg.googlecode.com/svn/trunk/hector_quadrotor_experimental'}
+- svn: {local-name: hector_sandbox, uri: 'http://tu-darmstadt-ros-pkg.googlecode.com/svn/trunk/hector_sandbox'}
+- svn: {local-name: hector_slam, uri: 'https://tu-darmstadt-ros-pkg.googlecode.com/svn/branches/fuerte/hector_slam'}
+- svn: {local-name: hector_turtlebot, uri: 'http://tu-darmstadt-ros-pkg.googlecode.com/svn/trunk/hector_turtlebot'}
+- svn: {local-name: hector_ugv_common, uri: 'https://tu-darmstadt-ros-pkg.googlecode.com/svn/trunk/hector_ugv_common'}
+- svn: {local-name: hector_worldmodel, uri: 'http://tu-darmstadt-ros-pkg.googlecode.com/svn/trunk/hector_worldmodel'}
+- git: {local-name: imu_tools, uri: 'https://github.com/FalkorSystems/imu_tools.git'}
+- git:
+    local-name: mav_tools
+    meta: {repo-name: ccny-ros-pkg}
+    uri: https://github.com/ccny-ros-pkg/mav_tools.git
+- git:
+    local-name: orocos_toolchain
+    meta: {repo-name: kul-ros-pkg}
+    uri: http://git.gitorious.org/orocos-toolchain/orocos_toolchain.git
+    version: master
+- git:
+    local-name: rtt_common_msgs
+    meta: {repo-name: kul-ros-pkg}
+    uri: http://git.mech.kuleuven.be/robotics/rtt_common_msgs.git
+    version: master
+- git:
+    local-name: rtt_geometry
+    meta: {repo-name: kul-ros-pkg}
+    uri: http://git.mech.kuleuven.be/robotics/rtt_geometry.git
+    version: master
+- git:
+    local-name: rtt_ros_comm
+    meta: {repo-name: kul-ros-pkg}
+    uri: http://git.mech.kuleuven.be/robotics/rtt_ros_comm.git
+    version: master
+- git:
+    local-name: rtt_ros_integration
+    meta: {repo-name: kul-ros-pkg}
+    uri: http://git.mech.kuleuven.be/robotics/rtt_ros_integration.git
+    version: master
+- git: {local-name: ardrone_autonomy, uri: 'https://github.com/AutonomyLab/ardrone_autonomy.git'}
+- svn: {local-name: joystick_drivers, uri: 'https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk'}
+- svn: {local-name: ps3joy, uri: 'https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk/ps3joy'}
+- hg:
+    local-name: robot_model_tutorials
+    meta: {repo-name: wg-kforge}
+    uri: https://kforge.ros.org/robotmodel/tutorials
+    version: default
+- git: {local-name: ccny-gps, uri: 'https://github.com/ccny-ros-pkg/ccny_gps.git'}
+- git: {local-name: falkor_ardrone, uri: 'https://github.com/FalkorSystems/falkor_ardrone.git'}
+- git: {local-name: rtklib_ros, uri: 'https://github.com/FalkorSystems/rtklib_ros.git'}
+- hg:
+    local-name: rosserial
+    meta: {repo-name: wg-kforge}
+    uri: https://kforge.ros.org/rosserial/hg
+    version: default
+- hg:
+    local-name: geometry
+    meta: {repo-name: wg-kforge}
+    uri: https://kforge.ros.org/geometry/geometry
+    version: fuerte_devel
+- hg:
+    local-name: bullet
+    meta: {repo-name: wg-kforge}
+    uri: https://kforge.ros.org/geometry/bullet
+    version: default
+- git:
+    local-name: orocos_kinematics_dynamics
+    meta: {repo-name: kul-ros-pkg}
+    uri: http://git.mech.kuleuven.be/robotics/orocos_kinematics_dynamics.git
+    version: master
+- svn: {local-name: diagnostic_updater, uri: 'https://code.ros.org/svn/ros-pkg/stacks/diagnostics/trunk/diagnostic_updater'}
+- hg:
+    local-name: common_rosdeps
+    meta: {repo-name: wg-kforge}
+    uri: https://kforge.ros.org/common/rosdepcore
+    version: default
