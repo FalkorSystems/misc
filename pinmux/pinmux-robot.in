@@ -1,0 +1,65 @@
+[header]
+	name Robot
+	version 0000
+	manufacturer Falkor Systems
+	part RobotBone
+	serial 0000
+
+[current]
+	3.3vdd 123mA
+	5vdd 500mA
+	5sys 2000mA
+	supplied 1234mA
+
+# UART1 for XBee
+# need to add RTS/CTS
+[pin p9-26] # Rx
+     in
+     fast
+     rx
+     mux uart1_rxd
+
+[pin p9-24] # Tx
+     out
+     fast
+     mux uart1_txd
+
+# UART2 for GPS
+# need to add RTS/CTS
+[pin p9-22] # Rx
+     in
+     fast
+     rx
+     mux uart2_rxd
+
+[pin p9-21] # Tx
+     out
+     fast
+     mux uart2_txd
+
+# UART4 for Servo Controller
+[pin p9-11] # Rx
+     in
+     fast
+     rx
+     mux uart4_rxd
+
+[pin p9-13] # Tx
+     out
+     fast
+     mux uart4_txd
+
+# I2C for IMU and Barometer
+[pin p9-17]
+     bidir
+     fast
+     mux i2c1_scl
+
+[pin p9-18]
+     bidir
+     fast
+     mux i2c1_sda
+
+#
+# No muxing required for analog
+#
