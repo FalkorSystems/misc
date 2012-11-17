@@ -10,20 +10,6 @@
 - setup-file: {local-name: /opt/ros/fuerte/setup.sh}
 - svn: {local-name: biorob_common, uri: 'https://tu-darmstadt-ros-pkg.googlecode.com/svn/trunk/biorob_common'}
 - git: {local-name: falkor_quadrotor, uri: 'https://github.com/FalkorSystems/falkor_quadrotor.git'}
-- git: {local-name: hector_common, uri: 'https://github.com/FalkorSystems/hector_common.git'}
-- git: {local-name: hector_gazebo, uri: 'https://github.com/FalkorSystems/hector_gazebo.git'}
-- git: {local-name: hector_localization, uri: 'https://github.com/FalkorSystems/hector_localization.git'}
-- git: {local-name: hector_models, uri: 'https://github.com/FalkorSystems/hector_models.git'}
-- svn: {local-name: hector_navigation, uri: 'http://tu-darmstadt-ros-pkg.googlecode.com/svn/trunk/hector_navigation'}
-- svn: {local-name: hector_nist_arenas_gazebo, uri: 'https://tu-darmstadt-ros-pkg.googlecode.com/svn/trunk/hector_nist_arenas_gazebo'}
-- git: {local-name: hector_quadrotor, uri: 'https://github.com/FalkorSystems/hector_quadrotor.git'}
-- svn: {local-name: hector_quadrotor_apps, uri: 'http://tu-darmstadt-ros-pkg.googlecode.com/svn/trunk/hector_quadrotor_apps'}
-- svn: {local-name: hector_quadrotor_experimental, uri: 'https://tu-darmstadt-ros-pkg.googlecode.com/svn/trunk/hector_quadrotor_experimental'}
-- svn: {local-name: hector_sandbox, uri: 'http://tu-darmstadt-ros-pkg.googlecode.com/svn/trunk/hector_sandbox'}
-- svn: {local-name: hector_slam, uri: 'https://tu-darmstadt-ros-pkg.googlecode.com/svn/branches/fuerte/hector_slam'}
-- svn: {local-name: hector_turtlebot, uri: 'http://tu-darmstadt-ros-pkg.googlecode.com/svn/trunk/hector_turtlebot'}
-- svn: {local-name: hector_ugv_common, uri: 'https://tu-darmstadt-ros-pkg.googlecode.com/svn/trunk/hector_ugv_common'}
-- svn: {local-name: hector_worldmodel, uri: 'http://tu-darmstadt-ros-pkg.googlecode.com/svn/trunk/hector_worldmodel'}
 - git: {local-name: imu_tools, uri: 'https://github.com/FalkorSystems/imu_tools.git'}
 - git:
     local-name: mav_tools
@@ -54,7 +40,6 @@
     meta: {repo-name: kul-ros-pkg}
     uri: http://git.mech.kuleuven.be/robotics/rtt_ros_integration.git
     version: master
-- git: {local-name: ardrone_autonomy, uri: 'https://github.com/AutonomyLab/ardrone_autonomy.git'}
 - svn: {local-name: joystick_drivers, uri: 'https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk'}
 - svn: {local-name: ps3joy, uri: 'https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk/ps3joy'}
 - hg:
@@ -63,7 +48,6 @@
     uri: https://kforge.ros.org/robotmodel/tutorials
     version: default
 - git: {local-name: ccny-gps, uri: 'https://github.com/ccny-ros-pkg/ccny_gps.git'}
-- git: {local-name: falkor_ardrone, uri: 'https://github.com/FalkorSystems/falkor_ardrone.git'}
 - git: {local-name: rtklib_ros, uri: 'https://github.com/FalkorSystems/rtklib_ros.git'}
 - hg:
     local-name: rosserial
@@ -90,4 +74,24 @@
     local-name: common_rosdeps
     meta: {repo-name: wg-kforge}
     uri: https://kforge.ros.org/common/rosdepcore
+    version: default
+- hg:
+    local-name: nodelet_core
+    meta: {repo-name: wg-kforge}
+    uri: https://kforge.ros.org/common/nodeletcore
+    version: default
+- hg:
+    local-name: pluginlib
+    meta: {repo-name: wg-kforge}
+    uri: https://kforge.ros.org/common/pluginlib
+    version: fuerte
+- hg:
+    local-name: bond_core
+    meta: {repo-name: wg-kforge}
+    uri: https://kforge.ros.org/common/bondcore
+    version: default
+- hg:
+    local-name: dynamic_reconfigure
+    meta: {repo-name: wg-kforge}
+    uri: https://kforge.ros.org/common/dynamicreconfig
     version: default
