@@ -8,46 +8,13 @@
 - other: {local-name: /opt/ros/fuerte/share}
 - other: {local-name: /opt/ros/fuerte/stacks}
 - setup-file: {local-name: /opt/ros/fuerte/setup.sh}
-- svn: {local-name: biorob_common, uri: 'https://tu-darmstadt-ros-pkg.googlecode.com/svn/trunk/biorob_common'}
 - git: {local-name: falkor_quadrotor, uri: 'https://github.com/FalkorSystems/falkor_quadrotor.git'}
 - git: {local-name: imu_tools, uri: 'https://github.com/FalkorSystems/imu_tools.git'}
 - git:
     local-name: mav_tools
     meta: {repo-name: ccny-ros-pkg}
     uri: https://github.com/ccny-ros-pkg/mav_tools.git
-- git:
-    local-name: orocos_toolchain
-    meta: {repo-name: kul-ros-pkg}
-    uri: http://git.gitorious.org/orocos-toolchain/orocos_toolchain.git
-    version: master
-- git:
-    local-name: rtt_common_msgs
-    meta: {repo-name: kul-ros-pkg}
-    uri: http://git.mech.kuleuven.be/robotics/rtt_common_msgs.git
-    version: master
-- git:
-    local-name: rtt_geometry
-    meta: {repo-name: kul-ros-pkg}
-    uri: http://git.mech.kuleuven.be/robotics/rtt_geometry.git
-    version: master
-- git:
-    local-name: rtt_ros_comm
-    meta: {repo-name: kul-ros-pkg}
-    uri: http://git.mech.kuleuven.be/robotics/rtt_ros_comm.git
-    version: master
-- git:
-    local-name: rtt_ros_integration
-    meta: {repo-name: kul-ros-pkg}
-    uri: http://git.mech.kuleuven.be/robotics/rtt_ros_integration.git
-    version: master
 - svn: {local-name: joystick_drivers, uri: 'https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk'}
-- svn: {local-name: ps3joy, uri: 'https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk/ps3joy'}
-- hg:
-    local-name: robot_model_tutorials
-    meta: {repo-name: wg-kforge}
-    uri: https://kforge.ros.org/robotmodel/tutorials
-    version: default
-- git: {local-name: ccny-gps, uri: 'https://github.com/ccny-ros-pkg/ccny_gps.git'}
 - git: {local-name: rtklib_ros, uri: 'https://github.com/FalkorSystems/rtklib_ros.git'}
 - hg:
     local-name: rosserial
