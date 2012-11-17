@@ -1,0 +1,3 @@
+[submodule "beaglebone-pinmux-tool"]
+	path = beaglebone-pinmux-tool
+	url = https://github.com/FalkorSystems/beaglebone-pinmux-tool.git
