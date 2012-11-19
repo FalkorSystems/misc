@@ -1,6 +1,7 @@
 Robot Beagle:
  - XBee (UART1)
  - GPS (UART2)
+ - PWM Input (UART3)
  - Servo Controller (UART4)
  - IMU (I2C)
  - Barometer (I2C)
