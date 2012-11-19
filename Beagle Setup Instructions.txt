@@ -30,7 +30,7 @@ iface wlan0 inet dhcp
 
 # http://www.ros.org/wiki/fuerte/Installation/Ubuntu/Source
 
-sudo apt-get install python-pip build-essential python-yaml cmake subversion wget python-setuptools mercurial git-core python-yaml libapr1-dev libaprutil1-dev libbz2-dev python-dev python-empy python-nose libgtest-dev python-paramiko libboost-all-dev liblog4cxx10-dev pkg-config python-serial python-sip python-sip-dev libeigen3-dev libcppunit-dev git-flow vim
+sudo apt-get install python-pip build-essential python-yaml cmake subversion wget python-setuptools mercurial git-core python-yaml libapr1-dev libaprutil1-dev libbz2-dev python-dev python-empy python-nose libgtest-dev python-paramiko libboost-all-dev liblog4cxx10-dev pkg-config python-serial python-sip python-sip-dev libeigen3-dev libcppunit-dev git-flow vim libtinyxml-dev unzip libblas-dev liblapack-dev
 
 sudo pip install -U rosinstall vcstools rospkg rosdep pyserial
 
