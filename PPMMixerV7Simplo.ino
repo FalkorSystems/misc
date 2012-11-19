@@ -71,12 +71,10 @@ ISR(PCINT2_vect)
 
 void print()
 {
-  for(int i=0;i<MAXCHANIN;i++) {
-    Serial.print("C");
-    Serial.print(i+1);
-    Serial.print(":");
-    Serial.print(rawIn[i]);
+  Serial.print(rawIn[0]);
+  for(int i=1;i<MAXCHANIN;i++) {
     Serial.print(",");
+    Serial.print(rawIn[i]);
   }
   Serial.println();
 }
