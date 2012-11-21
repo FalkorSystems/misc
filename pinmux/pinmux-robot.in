@@ -11,8 +11,7 @@
 	5sys 2000mA
 	supplied 1234mA
 
-# UART1 for XBee
-# need to add RTS/CTS
+# UART1 for PWM Input
 [pin p9-26] # Rx
      in
      fast
@@ -25,7 +24,6 @@
      mux uart1_txd
 
 # UART2 for GPS
-# need to add RTS/CTS
 [pin p9-22] # Rx
      in
      fast
@@ -37,7 +35,7 @@
      fast
      mux uart2_txd
 
-# UART4 for Servo Controller
+# UART4 for XBee
 [pin p9-11] # Rx
      in
      fast
@@ -48,6 +46,18 @@
      out
      fast
      mux uart4_txd
+
+# UART5 for Servo Controller
+[pin p8-31] # Rx
+     in
+     fast
+     rx
+     mux uart5_rxd
+
+[pin p8-37] # Tx
+     out
+     fast
+     mux uart5_txd
 
 # I2C for IMU and Barometer
 [pin p9-17]
