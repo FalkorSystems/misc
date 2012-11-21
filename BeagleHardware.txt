@@ -1,11 +1,11 @@
 Robot Beagle:
- - XBee (UART1)
- - GPS (UART2)
- - PWM Input (UART3)
- - Servo Controller (UART4)
- - IMU (I2C)
- - Barometer (I2C)
- - Sonar (Analog)
+ - XBee (UART4) Rx: p9-11 Tx: p9-13
+ - GPS (UART2) Rx: p9-22 Tx: p9-21
+ - PWM Input (UART1) Rx: p9-26 Tx: p9-24
+ - Servo Controller (UART5) Rx: p8-31 Tx: p8-37
+ - IMU (I2C-1) SCL: p9-17 SDA: p9-18
+ - Barometer (I2C-2) (another i2c or the same?) SCL: p9-19 SDA: p9-20
+ - Sonar (Analog) p9-40
 
 Beacon Beagle:
  - XBee (UART1)
