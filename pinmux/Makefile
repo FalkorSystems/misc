@@ -4,15 +4,15 @@ clean:
 
 install-robot: pinmux-robot.sh
 	install -m 0755 pinmux-robot.sh /etc/init.d
-	ln -s /etc/init.d/pinmux-robot.sh /etc/rc5.d/S90pinmux
+	ln -sf /etc/init.d/pinmux-robot.sh /etc/rc5.d/S90pinmux
 
 install-beacon: pinmux-beacon.sh
 	install -m 0755 pinmux-beacon.sh /etc/init.d
-	ln -s /etc/init.d/pinmux-beacon.sh /etc/rc5.d/S90pinmux
+	ln -sf /etc/init.d/pinmux-beacon.sh /etc/rc5.d/S90pinmux
 
 install-operator: pinmux-operator.sh
 	install -m 0755 pinmux-operator.sh /etc/init.d
-	ln -s /etc/init.d/pinmux-operator.sh /etc/rc5.d/S90pinmux
+	ln -sf /etc/init.d/pinmux-operator.sh /etc/rc5.d/S90pinmux
 
 pinmux-robot.sh: pinmux-robot.in
 	../beaglebone-pinmux-tool/bbone_pinmux_tool.rb \
