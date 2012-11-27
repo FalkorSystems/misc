@@ -16,11 +16,15 @@
      in
      fast
      rx
+     pull down
+     pull enable
      mux uart1_rxd
 
 [pin p9-24] # Tx
      out
      fast
+     pull down
+     pull enable
      mux uart1_txd
 
 # UART2 for GPS
@@ -28,11 +32,15 @@
      in
      fast
      rx
+     pull down
+     pull enable
      mux uart2_rxd
 
 [pin p9-21] # Tx
      out
      fast
+     pull down
+     pull enable
      mux uart2_txd
 
 # UART4 for XBee
@@ -40,11 +48,15 @@
      in
      fast
      rx
+     pull down
+     pull enable
      mux uart4_rxd
 
 [pin p9-13] # Tx
      out
      fast
+     pull down
+     pull enable
      mux uart4_txd
 
 # UART5 for Servo Controller
@@ -52,11 +64,15 @@
      in
      fast
      rx
+     pull down
+     pull enable
      mux uart5_rxd
 
 [pin p8-37] # Tx
      out
      fast
+     pull down
+     pull enable
      mux uart5_txd
 
 # I2C for IMU and Barometer
