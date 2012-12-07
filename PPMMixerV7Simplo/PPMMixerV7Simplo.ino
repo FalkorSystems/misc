@@ -11,25 +11,25 @@ int rawIn[MAXCHANIN];
 void setupRx()
 {
   pinMode(2, INPUT); // 3 is used for esc
+  pinMode(3, INPUT);
   pinMode(4, INPUT);
   pinMode(5, INPUT);
   pinMode(6, INPUT);
-  pinMode(7, INPUT);
   // interrupt on pin change PCINT
   PCICR |= (1 << PCIE2);
 
   PCMSK2 = (1 << PCINT18) | // pin2
+  (1 << PCINT19) | // pin3
   (1 << PCINT20) | // pin4
   (1 << PCINT21) | // pin5
-  (1 << PCINT22) | // pin6
-  (1 << PCINT23) ; // pin7 // not need if you don't use RXDIRECT
+  (1 << PCINT22);  // pin6
 }
 
 #define MASKPCINT0 (1<<2)
-#define MASKPCINT1 (1<<4)
-#define MASKPCINT2 (1<<5)
-#define MASKPCINT3 (1<<6)
-#define MASKPCINT4 (1<<7)
+#define MASKPCINT1 (1<<3)
+#define MASKPCINT2 (1<<4)
+#define MASKPCINT3 (1<<5)
+#define MASKPCINT4 (1<<6)
   
 ISR(PCINT2_vect)
 {
