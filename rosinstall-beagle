@@ -67,3 +67,4 @@
     meta: {repo-name: wg-kforge}
     uri: https://kforge.ros.org/common/xacro
     version: xacro
+- git: {local-name: hector_common, uri: 'https://github.com/FalkorSystems/hector_common.git'}
