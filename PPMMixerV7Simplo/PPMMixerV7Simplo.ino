@@ -2,7 +2,7 @@
 PPM Mixer V7 Simplo
  ferrara [ar] libero.it
  */
-#define MAXCHANIN 5
+#define MAXCHANIN 6
 
 /** RX Section **/
 //***********************************************************************************************************************
@@ -10,11 +10,12 @@ int rawIn[MAXCHANIN];
 
 void setupRx()
 {
-  pinMode(2, INPUT); // 3 is used for esc
+  pinMode(2, INPUT); 
   pinMode(3, INPUT);
   pinMode(4, INPUT);
   pinMode(5, INPUT);
   pinMode(6, INPUT);
+  pinMode(7, INPUT);
   // interrupt on pin change PCINT
   PCICR |= (1 << PCIE2);
 
@@ -22,7 +23,8 @@ void setupRx()
   (1 << PCINT19) | // pin3
   (1 << PCINT20) | // pin4
   (1 << PCINT21) | // pin5
-  (1 << PCINT22);  // pin6
+  (1 << PCINT22) | // pin6
+  (1 << PCINT23);  // pin7
 }
 
 #define MASKPCINT0 (1<<2)
@@ -30,7 +32,8 @@ void setupRx()
 #define MASKPCINT2 (1<<4)
 #define MASKPCINT3 (1<<5)
 #define MASKPCINT4 (1<<6)
-  
+#define MASKPCINT5 (1<<7)
+
 ISR(PCINT2_vect)
 {
   static byte newbit,oldbit,changed;
@@ -65,7 +68,11 @@ ISR(PCINT2_vect)
   if (changed&MASKPCINT4)
     if (newbit&MASKPCINT4) startIn[4]=time;
     else rawIn[4]=time-startIn[4];
-
+    
+  if (changed&MASKPCINT5)
+    if (newbit&MASKPCINT5) startIn[5]=time;
+    else rawIn[5]=time-startIn[5];
+    
   oldbit=newbit;
 }
 
