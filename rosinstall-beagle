@@ -62,3 +62,8 @@
     meta: {repo-name: wg-kforge}
     uri: https://kforge.ros.org/common/dynamicreconfig
     version: default
+- hg:
+    local-name: xacro
+    meta: {repo-name: wg-kforge}
+    uri: https://kforge.ros.org/common/xacro
+    version: xacro
