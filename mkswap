@@ -1,0 +1,8 @@
+#!/bin/sh
+# run this to make a 1GB swap file, because the beagle
+# doesn't have enough ram to compile everything
+
+fallocate -l 1g /mnt/1GiB.swap
+chmod 600 /mnt/1GiB.swap
+mkswap /mnt/1GiB.swap
+swapon /mnt/1GiB.swap
