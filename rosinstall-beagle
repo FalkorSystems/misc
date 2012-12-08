@@ -1,0 +1,69 @@
+# THIS IS A FILE WHICH IS MODIFIED BY rosinstall
+# IT IS UNLIKELY YOU WANT TO EDIT THIS FILE BY HAND,
+# UNLESS FOR REMOVING ENTRIES.
+# IF YOU WANT TO CHANGE THE ROS ENVIRONMENT VARIABLES
+# USE THE rosinstall TOOL INSTEAD.
+# IF YOU CHANGE IT, USE rosinstall FOR THE CHANGES TO TAKE EFFECT
+- other: {local-name: /opt/ros/fuerte/share/ros}
+- other: {local-name: /opt/ros/fuerte/share}
+- other: {local-name: /opt/ros/fuerte/stacks}
+- setup-file: {local-name: /opt/ros/fuerte/setup.sh}
+- git: {local-name: falkor_quadrotor, uri: 'https://github.com/FalkorSystems/falkor_quadrotor.git'}
+- git: {local-name: imu_tools, uri: 'https://github.com/FalkorSystems/imu_tools.git'}
+- git:
+    local-name: mav_tools
+    meta: {repo-name: ccny-ros-pkg}
+    uri: https://github.com/ccny-ros-pkg/mav_tools.git
+- svn: {local-name: joystick_drivers, uri: 'https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk'}
+- git: {local-name: rtklib_ros, uri: 'https://github.com/FalkorSystems/rtklib_ros.git'}
+- hg:
+    local-name: rosserial
+    meta: {repo-name: wg-kforge}
+    uri: https://kforge.ros.org/rosserial/hg
+    version: default
+- hg:
+    local-name: geometry
+    meta: {repo-name: wg-kforge}
+    uri: https://kforge.ros.org/geometry/geometry
+    version: fuerte_devel
+- hg:
+    local-name: bullet
+    meta: {repo-name: wg-kforge}
+    uri: https://kforge.ros.org/geometry/bullet
+    version: default
+- git:
+    local-name: orocos_kinematics_dynamics
+    meta: {repo-name: kul-ros-pkg}
+    uri: http://git.mech.kuleuven.be/robotics/orocos_kinematics_dynamics.git
+    version: master
+- svn: {local-name: diagnostic_updater, uri: 'https://code.ros.org/svn/ros-pkg/stacks/diagnostics/trunk/diagnostic_updater'}
+- hg:
+    local-name: common_rosdeps
+    meta: {repo-name: wg-kforge}
+    uri: https://kforge.ros.org/common/rosdepcore
+    version: default
+- hg:
+    local-name: nodelet_core
+    meta: {repo-name: wg-kforge}
+    uri: https://kforge.ros.org/common/nodeletcore
+    version: default
+- hg:
+    local-name: pluginlib
+    meta: {repo-name: wg-kforge}
+    uri: https://kforge.ros.org/common/pluginlib
+    version: fuerte
+- hg:
+    local-name: bond_core
+    meta: {repo-name: wg-kforge}
+    uri: https://kforge.ros.org/common/bondcore
+    version: default
+- hg:
+    local-name: dynamic_reconfigure
+    meta: {repo-name: wg-kforge}
+    uri: https://kforge.ros.org/common/dynamicreconfig
+    version: default
+- hg:
+    local-name: xacro
+    meta: {repo-name: wg-kforge}
+    uri: https://kforge.ros.org/common/xacro
+    version: xacro

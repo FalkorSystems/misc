@@ -20,6 +20,7 @@
      pull enable
      mux uart1_rxd
 
+# UART1 for PWM Output
 [pin p9-24] # Tx
      out
      fast
@@ -59,8 +60,8 @@
      pull enable
      mux uart4_txd
 
-# UART5 for Servo Controller
-[pin p8-31] # Rx
+# UART5 for Second XBee
+[pin p8-38] # Rx
      in
      fast
      rx
