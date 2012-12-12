@@ -68,3 +68,8 @@
     uri: https://kforge.ros.org/common/xacro
     version: xacro
 - git: {local-name: hector_common, uri: 'https://github.com/FalkorSystems/hector_common.git'}
+- hg:
+    local-name: robot_model
+    meta: {repo-name: rosdistro_fuerte}
+    uri: https://kforge.ros.org/robotmodel/robot_model
+    version: robot_model-1.8
