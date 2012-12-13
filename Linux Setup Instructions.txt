@@ -2,6 +2,8 @@
 ## Falkor Linux Installation Instructions
 ####
 
+# Install Ubuntu 12.04.1
+
 # Launch Terminal, lock to Launcher
 # unlock useless open office stuff from launcher
 
@@ -13,7 +15,10 @@ sudo apt-get upgrade
 # http://www.samontab.com/web/2012/06/installing-opencv-2-4-1-ubuntu-12-04-lts/
 
 # dependencies
-sudo apt-get install build-essential libgtk2.0-dev libjpeg-dev libtiff4-dev libjasper-dev libopenexr-dev cmake python-dev python-numpy python-scipy python-tk libtbb-dev libeigen2-dev yasm libfaac-dev libopencore-amrnb-dev libopencore-amrwb-dev libtheora-dev libvorbis-dev libxvidcore-dev libx264-dev libqt4-dev libqt4-opengl-dev sphinx-common texlive-latex-extra libv4l-dev libdc1394-22-dev libavcodec-dev libavformat-dev libswscale-dev ruby rubygems erubis
+sudo apt-get install build-essential libgtk2.0-dev libjpeg-dev libtiff4-dev libjasper-dev libopenexr-dev cmake python-dev python-numpy python-scipy python-tk libtbb-dev libeigen2-dev yasm libfaac-dev libopencore-amrnb-dev libopencore-amrwb-dev libtheora-dev libvorbis-dev libxvidcore-dev libx264-dev libqt4-dev libqt4-opengl-dev sphinx-common texlive-latex-extra libv4l-dev libdc1394-22-dev libavcodec-dev libavformat-dev libswscale-dev ruby rubygems erubis screen
+
+# give me tty access
+sudo usermod -a -G dialout sameer
 
 # Get OpenCV
 cd ~
@@ -29,7 +34,7 @@ cmake -D WITH_TBB=ON -D BUILD_NEW_PYTHON_SUPPORT=ON -D WITH_V4L=ON -D INSTALL_C_
 # Make sure the config looks right
 
 # Make
-make
+make -j4
 sudo make install
 
 # Configure
@@ -70,7 +75,7 @@ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu precise main" > /etc/ap
 wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
 sudo apt-get update
 
-sudo apt-get install ros-fuerte-desktop-full python-rosinstall python-rosdep doxygen rubygems1.8 libxslt1-dev omniorb libreadline-dev omniorb omniidl omniorb-nameserver libomniorb4-1 libomniorb4-dev libomnithread3-dev libomnithread3c2 gccxml antlr libantlr-dev libxslt1-dev liblua5.1-0-dev ruby1.8-dev libruby1.8 rubygems1.8 python-pip python-rosinstall python-vcstools emacs23 rosemacs-el git git-svn git-flow joystick python-bluez libusb-dev openni-dev
+sudo apt-get install ros-fuerte-desktop-full python-rosinstall python-rosdep doxygen rubygems1.8 libxslt1-dev omniorb libreadline-dev omniorb omniidl omniorb-nameserver libomniorb4-1 libomniorb4-dev libomnithread3-dev libomnithread3c2 gccxml antlr libantlr-dev libxslt1-dev liblua5.1-0-dev ruby1.8-dev libruby1.8 rubygems1.8 python-pip python-rosinstall python-vcstools emacs23 rosemacs-el git git-svn git-flow joystick python-bluez libusb-dev openni-dev rake liblapack-dev liblblas-dev minicom
 
 sudo pip install xbee
 
@@ -84,6 +89,7 @@ roslaunch gazebo_worlds empty_world.launch
 ## Git
 git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
+git config --global credential.helper 'cache --timeout=3600'
 
 cat >> ~/.emacs <<EOF
 ;; Load the library and start it up
@@ -103,7 +109,7 @@ source setup.sh
 
 git clone https://github.com/FalkorSystems/misc
 
-cp misc/.rosinstall .
+cp misc/rosinstall-pc ./.rosinstall
 source setup.sh
 
 rosws update --parallel=4
@@ -129,7 +135,7 @@ rosmake orocos_toolchain rtt_ros_integration rtt_ros_comm rtt_common_msgs rtt_ge
 # ardrone
 roscd ardrone_autonomy
 ./build_sdk.sh
-rosmake ardrone_autonomy
+rosmake falkor_ardrone
 
 # falkor quadrotor
 rosmake falkor_quadrotor
