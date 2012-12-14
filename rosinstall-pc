@@ -1,4 +1,3 @@
-# THIS IS A FILE WHICH IS MODIFIED BY rosinstall
 # IT IS UNLIKELY YOU WANT TO EDIT THIS FILE BY HAND,
 # UNLESS FOR REMOVING ENTRIES.
 # IF YOU WANT TO CHANGE THE ROS ENVIRONMENT VARIABLES
@@ -9,7 +8,8 @@
 - other: {local-name: /opt/ros/fuerte/stacks}
 - setup-file: {local-name: /opt/ros/fuerte/setup.sh}
 - svn: {local-name: biorob_common, uri: 'https://tu-darmstadt-ros-pkg.googlecode.com/svn/trunk/biorob_common'}
-- git: {local-name: falkor_quadrotor, uri: 'https://github.com/FalkorSystems/falkor_quadrotor.git'}
+- git: {local-name: falkor_quadrotor, uri: 'https://github.com/FalkorSystems/falkor_quadrotor.git',
+    version: develop}
 - git: {local-name: hector_common, uri: 'https://github.com/FalkorSystems/hector_common.git'}
 - git: {local-name: hector_gazebo, uri: 'https://github.com/FalkorSystems/hector_gazebo.git'}
 - git: {local-name: hector_localization, uri: 'https://github.com/FalkorSystems/hector_localization.git'}
@@ -75,3 +75,8 @@
     meta: {repo-name: wg-kforge}
     uri: https://kforge.ros.org/rosserial/hg
     version: default
+- git:
+    local-name: nmea_gps_driver
+    meta: {repo-name: gps-ros-pkg}
+    uri: https://kforge.ros.org/gpsdrivers/nmea_gps_driver
+    version: master

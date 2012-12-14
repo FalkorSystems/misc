@@ -77,15 +77,19 @@
      mux uart5_txd
 
 # I2C for IMU and Barometer
-[pin p9-17]
+[pin p9-19]
      bidir
      fast
-     mux i2c1_scl
+     pull up
+     pull enable
+     mux i2c2_scl
 
-[pin p9-18]
+[pin p9-20]
      bidir
      fast
-     mux i2c1_sda
+     pull up
+     pull enable
+     mux i2c2_sda
 
 #
 # No muxing required for analog
