@@ -30,7 +30,7 @@ iface wlan0 inet dhcp
 
 # http://www.ros.org/wiki/fuerte/Installation/Ubuntu/Source
 
-sudo apt-get install python-pip build-essential python-yaml cmake subversion wget python-setuptools mercurial git-core python-yaml libapr1-dev libaprutil1-dev libbz2-dev python-dev python-empy python-nose libgtest-dev python-paramiko libboost-all-dev liblog4cxx10-dev pkg-config python-serial python-sip python-sip-dev libeigen3-dev libcppunit-dev git-flow vim libtinyxml-dev unzip libblas-dev liblapack-dev python-numpy libxml2-dev xterm emacs dbus libcanberra-gtk-module graphviz evince
+sudo apt-get install python-pip build-essential python-yaml cmake subversion wget python-setuptools mercurial git-core python-yaml libapr1-dev libaprutil1-dev libbz2-dev python-dev python-empy python-nose libgtest-dev python-paramiko libboost-all-dev liblog4cxx10-dev pkg-config python-serial python-sip python-sip-dev libeigen3-dev libcppunit-dev git-flow vim libtinyxml-dev unzip libblas-dev liblapack-dev python-numpy libxml2-dev xterm emacs dbus libcanberra-gtk-module graphviz evince gcc-multilib
 
 
 sudo pip install -U rosinstall vcstools rospkg rosdep pyserial xbee
@@ -60,10 +60,17 @@ cd ~/ros
 rosws init
 source setup.sh
 
-git config credential.helper 'cache --timeout=3600'
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+git config --global credential.helper 'cache --timeout=3600'
+
 git clone https://github.com/FalkorSystems/misc
 
+# run mkswap so we have enough swap to compile everything
+misc/mkswap
+
 cp misc/rosinstall-beagle .rosinstall
+
 source setup.sh
 
 rosws update --parallel=4
