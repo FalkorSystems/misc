@@ -15,7 +15,7 @@ sudo apt-get upgrade
 # http://www.samontab.com/web/2012/06/installing-opencv-2-4-1-ubuntu-12-04-lts/
 
 # dependencies
-sudo apt-get install build-essential libgtk2.0-dev libjpeg-dev libtiff4-dev libjasper-dev libopenexr-dev cmake python-dev python-numpy python-scipy python-tk libtbb-dev libeigen2-dev yasm libfaac-dev libopencore-amrnb-dev libopencore-amrwb-dev libtheora-dev libvorbis-dev libxvidcore-dev libx264-dev libqt4-dev libqt4-opengl-dev sphinx-common texlive-latex-extra libv4l-dev libdc1394-22-dev libavcodec-dev libavformat-dev libswscale-dev ruby rubygems erubis screen
+sudo apt-get install build-essential libgtk2.0-dev libjpeg-dev libtiff4-dev libjasper-dev libopenexr-dev cmake python-dev python-numpy python-scipy python-tk libtbb-dev libeigen2-dev yasm libfaac-dev libopencore-amrnb-dev libopencore-amrwb-dev libtheora-dev libvorbis-dev libxvidcore-dev libx264-dev libqt4-dev libqt4-opengl-dev sphinx-common texlive-latex-extra libv4l-dev libdc1394-22-dev libavcodec-dev libavformat-dev libswscale-dev ruby rubygems erubis screen ntp avrdude gcc-avr avr-libc
 
 # give me tty access
 sudo usermod -a -G dialout sameer
@@ -77,7 +77,7 @@ sudo apt-get update
 
 sudo apt-get install ros-fuerte-desktop-full python-rosinstall python-rosdep doxygen rubygems1.8 libxslt1-dev omniorb libreadline-dev omniorb omniidl omniorb-nameserver libomniorb4-1 libomniorb4-dev libomnithread3-dev libomnithread3c2 gccxml antlr libantlr-dev libxslt1-dev liblua5.1-0-dev ruby1.8-dev libruby1.8 rubygems1.8 python-pip python-rosinstall python-vcstools emacs23 rosemacs-el git git-svn git-flow joystick python-bluez libusb-dev openni-dev rake liblapack-dev liblblas-dev minicom
 
-sudo pip install xbee
+sudo pip install xbee progressbar
 
 sudo rosdep init
 rosdep update
@@ -141,6 +141,11 @@ rosmake falkor_ardrone
 rosmake falkor_quadrotor
 
 roslaunch falkor_quadrotor base.launch
+
+# ROS Cross-Compile for ARM
+echo "export PATH=`rospack find eros_python_tools`/scripts:\${PATH}" >> ~/ros/setup.sh
+
+sudo apt-get install gcc-arm-linux-gnueabi ros-fuerte-qt-ros
 
 
 
