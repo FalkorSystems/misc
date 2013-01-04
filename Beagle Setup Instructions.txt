@@ -30,7 +30,7 @@ iface wlan0 inet dhcp
 
 # http://www.ros.org/wiki/fuerte/Installation/Ubuntu/Source
 
-sudo apt-get install python-pip build-essential python-yaml cmake subversion wget python-setuptools mercurial git-core python-yaml libapr1-dev libaprutil1-dev libbz2-dev python-dev python-empy python-nose libgtest-dev python-paramiko libboost-all-dev liblog4cxx10-dev pkg-config python-serial python-sip python-sip-dev libeigen3-dev libcppunit-dev git-flow vim libtinyxml-dev unzip libblas-dev liblapack-dev python-numpy libxml2-dev xterm emacs dbus libcanberra-gtk-module graphviz evince gcc-multilib gdb python-smbus ntp python-matplotlib
+sudo apt-get install python-pip build-essential python-yaml cmake subversion wget python-setuptools mercurial git-core python-yaml libapr1-dev libaprutil1-dev libbz2-dev python-dev python-empy python-nose libgtest-dev python-paramiko libboost-all-dev liblog4cxx10-dev pkg-config python-serial python-sip python-sip-dev libeigen3-dev libcppunit-dev git-flow vim libtinyxml-dev unzip libblas-dev liblapack-dev python-numpy libxml2-dev xterm emacs dbus libcanberra-gtk-module graphviz evince gcc-multilib gdb python-smbus ntp python-matplotlib hostapd dhcp3-server bind9
 
 
 sudo pip install -U rosinstall vcstools rospkg rosdep pyserial xbee progressbar
@@ -82,6 +82,43 @@ echo 'source ~/ros/setup.sh' >> ~/.bashrc
 sudo usermod -a -G dialout ubuntu
 sudo usermod -a -G kmem ubuntu
 sudo usermod -a -G i2c ubuntu
+
+# Configure WiFi Access Point and DHCP
+cat > /etc/hostapd/hostapd.conf <<EOF
+interface=wlan2
+driver=nl80211
+ssid=FalkorRobot
+hw_mode=g
+channel=11
+wpa=0
+EOF
+
+cat > /etc/network/interfaces <<EOF
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet dhcp
+
+auto wlan2
+iface wlan2 inet static
+	address 10.10.0.1
+	netmask 255.255.255.0
+EOF
+
+cat > /etc/default/isc-dhcp-server <<EOF
+INTERFACES="wlan2"
+EOF
+
+cat > /etc/dhcp/dhcpd.conf <<EOF
+ddns-update-style none;
+default-lease-time 600;
+max-lease-time 7200;
+
+subnet 10.10.0.0 netmask 255.255.255.0 {
+	range 10.10.0.10 10.10.0.20
+}
+EOF
 
 # save the image
 # put the SD back in your pc
