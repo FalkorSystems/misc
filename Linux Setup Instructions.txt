@@ -144,7 +144,15 @@ roslaunch falkor_quadrotor base.launch
 # ROS Cross-Compile for ARM
 echo "export PATH=`rospack find eros_python_tools`/scripts:\${PATH}" >> ~/ros/setup.sh
 
-sudo apt-get install gcc-arm-linux-gnueabi ros-fuerte-qt-ros
+sudo apt-get install gcc-arm-linux-gnueabihf ros-fuerte-qt-ros
+
+echo controller > /etc/hostname
+cat >> /etc/hosts.conf <<EOF
+10.10.0.1	robot
+10.10.0.10	controller
+EOF
+
+
 
 
 
