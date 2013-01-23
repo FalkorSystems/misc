@@ -59,7 +59,8 @@
     meta: {repo-name: wg-kforge}
     uri: https://kforge.ros.org/geometry/eigen
     version: tf_rework
-- git: {local-name: ardrone_autonomy, uri: 'https://github.com/AutonomyLab/ardrone_autonomy.git'}
+- git: {local-name: ardrone_autonomy, uri: 'https://github.com/AutonomyLab/ardrone_autonomy.git',
+    version: dev-unstable}
 - svn: {local-name: joystick_drivers, uri: 'https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk'}
 - svn: {local-name: ps3joy, uri: 'https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk/ps3joy'}
 - hg:
@@ -80,3 +81,5 @@
     meta: {repo-name: gps-ros-pkg}
     uri: https://kforge.ros.org/gpsdrivers/nmea_gps_driver
     version: master
+- git: {local-name: tum_ardrone, uri: 'git://github.com/tum-vision/tum_ardrone.git'}
+- git: {local-name: ros_opentld, uri: 'https://github.com/FalkorSystems/ros_opentld.git'}
