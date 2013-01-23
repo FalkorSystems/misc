@@ -8,7 +8,8 @@
 - other: {local-name: /opt/ros/fuerte/share}
 - other: {local-name: /opt/ros/fuerte/stacks}
 - setup-file: {local-name: /opt/ros/fuerte/setup.sh}
-- git: {local-name: falkor_quadrotor, uri: 'https://github.com/FalkorSystems/falkor_quadrotor.git'}
+- git: {local-name: falkor_quadrotor, uri: 'https://github.com/FalkorSystems/falkor_quadrotor.git',
+    version: develop}
 - git: {local-name: imu_tools, uri: 'https://github.com/FalkorSystems/imu_tools.git'}
 - git:
     local-name: mav_tools
@@ -73,3 +74,8 @@
     meta: {repo-name: rosdistro_fuerte}
     uri: https://kforge.ros.org/robotmodel/robot_model
     version: robot_model-1.8
+- git:
+    local-name: nmea_gps_driver
+    meta: {repo-name: gps-ros-pkg}
+    uri: https://kforge.ros.org/gpsdrivers/nmea_gps_driver
+    version: master
