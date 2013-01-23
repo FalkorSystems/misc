@@ -1,3 +1,9 @@
 [submodule "beaglebone-pinmux-tool"]
 	path = beaglebone-pinmux-tool
 	url = https://github.com/FalkorSystems/beaglebone-pinmux-tool.git
+[submodule "SparkFun-9DOF-Razor-IMU-Test-Firmware"]
+	path = SparkFun-9DOF-Razor-IMU-Test-Firmware
+	url = https://github.com/FalkorSystems/SparkFun-9DOF-Razor-IMU-Test-Firmware.git
+[submodule "stable-kernel"]
+	path = stable-kernel
+	url = git://github.com/RobertCNelson/stable-kernel.git
