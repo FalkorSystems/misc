@@ -37,7 +37,7 @@ make -j4
 sudo make install
 
 # Configure
-sudo echo /usr/local/lib >> /etc/ld.so.conf.d/opencv.conf
+sudo sh -c "echo /usr/local/lib >> /etc/ld.so.conf.d/opencv.conf"
 sudo ldconfig
 
 sudo echo >> /etc/bash.bashrc <<EOF
@@ -74,7 +74,7 @@ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu precise main" > /etc/ap
 wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
 sudo apt-get update
 
-sudo apt-get install ros-fuerte-desktop-full python-rosinstall python-rosdep doxygen rubygems1.8 libxslt1-dev omniorb libreadline-dev omniorb omniidl omniorb-nameserver libomniorb4-1 libomniorb4-dev libomnithread3-dev libomnithread3c2 gccxml antlr libantlr-dev libxslt1-dev liblua5.1-0-dev ruby1.8-dev libruby1.8 rubygems1.8 python-pip python-rosinstall python-vcstools emacs23 rosemacs-el git git-svn git-flow joystick python-bluez libusb-dev openni-dev rake liblapack-dev liblblas-dev minicom
+sudo apt-get install ros-fuerte-desktop-full python-rosinstall python-rosdep doxygen rubygems1.8 libxslt1-dev omniorb libreadline-dev omniorb omniidl omniorb-nameserver libomniorb4-1 libomniorb4-dev libomnithread3-dev libomnithread3c2 gccxml antlr libantlr-dev libxslt1-dev liblua5.1-0-dev ruby1.8-dev libruby1.8 rubygems1.8 python-pip python-rosinstall python-vcstools emacs23 rosemacs-el git git-svn git-flow joystick python-bluez libusb-dev openni-dev rake liblapack-dev libblas-dev minicom
 
 sudo pip install xbee progressbar
 
